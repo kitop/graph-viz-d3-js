@@ -29,6 +29,7 @@
       bottom: 1.5em;
       left: 0;
       width: 40%;
+      transition: 0.5s opacity ease;
     }
 
     #editor-bar {
@@ -39,6 +40,7 @@
       bottom: 0;
       width: 40%;
       height: 1.5em;
+      transition: 0.5s opacity ease;
     }
 
     #graph {
@@ -49,12 +51,13 @@
       bottom: 1.5em;
       width: 60%;
       overflow: auto;
+      transition: 0.4s all ease;
     }
 
     #editor.hidden,
     #editor-bar.hidden {
       width: 0;
-      display: none;
+      opacity: 0;
     }
 
     #graph.fullscreen{

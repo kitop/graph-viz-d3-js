@@ -55,6 +55,18 @@ require(["stage", 'pegace', "ace/ace", "ace/lib/lang", "ace/ext/statusbar"],
     editor.on("change", function () {
       update.delay(600);
     });
+
+    document.getElementById("toggler")
+            .addEventListener("change", function() {
+      var editor = document.getElementById("editor"),
+          editorBar = document.getElementById("editor-bar"),
+          graph = document.getElementById("graph");
+
+        editor.classList.toggle('hidden', !this.checked)
+        editorBar.classList.toggle('hidden', !this.checked)
+        graph.classList.toggle('fullscreen', !this.checked)
+    });
+
   }
 );
 

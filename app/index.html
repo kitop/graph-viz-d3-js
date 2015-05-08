@@ -14,6 +14,15 @@
       margin: 15px;
     }
 
+    #toggle-box {
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 5px;
+      background: #EEE;
+      border: #CCC;
+    }
+
     #editor {
       position: absolute;
       top: 0;
@@ -42,6 +51,18 @@
       overflow: auto;
     }
 
+    #editor.hidden,
+    #editor-bar.hidden {
+      width: 0;
+      display: none;
+    }
+
+    #graph.fullscreen{
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
     path {
       fill: transparent;
       stroke: black;
@@ -55,7 +76,6 @@
   </style>
 </head>
 <body>
-
 <div id="editor">digraph G {
   subgraph cluster_0 {
     style=filled;
@@ -83,7 +103,13 @@
 }
 </div>
 <div id="editor-bar" class="ace_status-indicator"></div>
+
 <div id="graph"></div>
+
+<div id="toggle-box">
+  <input id="toggler" type="checkbox" checked>
+  Show editor
+</div>
 
 <script src="../lib/requirejs/require.js" data-main="app.js"></script>
 </body>
